@@ -15,11 +15,12 @@ class Psicologos extends Migration
     {
         Schema::create('psicologos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
+            $table->string('nome');
             $table->string('cpf');
+            $table->string('telefone');
             $table->string('email')->unique();
             $table->string('epsi');
-            $table->string('especialidades');
+            $table->string('especialidade');
             $table->timestamps();
         });
 

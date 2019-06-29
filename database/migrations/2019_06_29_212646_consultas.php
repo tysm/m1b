@@ -18,8 +18,8 @@ class Consultas extends Migration
             $table->string('paciente');
             $table->string('psicologo');
             $table->string('especialidade');
-            $table->string('inicio');
-            $table->string('fim');
+            $table->dateTime('inicio');
+            $table->dateTime('fim');
             $table->string('paciente_obs');
             $table->string('psicologo_fbk');
             $table->timestamps();
