@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Psicologo extends Model
 {
     protected $fillable = [
-        'name',
-        'id',
+        'nome',
         'cpf',
+        'telefone',
         'email',
         'epsi',
         'especialidade'

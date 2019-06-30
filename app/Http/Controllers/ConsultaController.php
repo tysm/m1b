@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Consulta;
+use App\Psicologo;
 use Illuminate\Http\Request;
 
 class ConsultaController extends Controller
@@ -14,10 +15,14 @@ class ConsultaController extends Controller
      */
     public function index($id)
     {
-        Consulta::find($id);
-        return view('consultas.index');
+        $psicologos = Psicologo::all();
+       // Consulta::find($id);
+        return view('consultas.index')->with(['psicologos' => $psicologos]);
+        //return view('consultas.index');
     }
 
+
+    
     /**
      * Show the form for creating a new resource.
      *
@@ -25,9 +30,9 @@ class ConsultaController extends Controller
      */
     public function create(Request $request)
     {
+        
         $data = Consulta::find($request->id);
         $data->create($request->all());
-
         return redirect('consultas.index');
 
     }
