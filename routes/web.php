@@ -29,3 +29,7 @@ Route::get('consultas/{id}', 'ConsultaController@index')->name('consultas');
 Route::get('consultas/create', 'ConsultaController@create')->name('consultas/create');
 Route::get('consultas/edit/{id}', 'ConsultaController@edit')->name('consultas/edit');
 Route::get('consultas/destroy/{id}', 'ConsultaController@destroy')->name('consultas/destroy');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
