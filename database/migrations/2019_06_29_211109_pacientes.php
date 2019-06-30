@@ -17,7 +17,7 @@ class Pacientes extends Migration
             $table->bigIncrements('id');
             $table->string('nome');
             $table->string('cpf');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('telefone');
             $table->timestamps();
         });

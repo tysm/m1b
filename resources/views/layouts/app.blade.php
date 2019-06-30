@@ -17,10 +17,10 @@
 
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="apple-mobile-web-app-title" content="Weather PWA">
+        <meta name="apple-mobile-web-app-title" content="Leve-se">
         <link rel="apple-touch-icon" href="/images/icons/icon-152x152.png">
 
-        <meta name="description" content="A sample weather app">
+        <meta name="description" content="Um web app para minimizar o mal do século">
         <link rel="stylesheet" href="{{ asset('css/app.css') }}" media ="screen" title="no title">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -37,7 +37,7 @@
 
     @show
 
-    <title>Nome | @yield('title')</title>
+    <title>Leve-se | @yield('title')</title>
     
 </head>
 <body>

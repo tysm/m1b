@@ -4,10 +4,8 @@
             <div class="container mt-5">
                 <div class="inner cover">
                     <div class="row">
-                        <h1 class="cover-heading">Nome</h1>
+                        <img class="mx-auto mt-5" src="{{ asset('imgs/logo.png')}}">
                     </div>
-                    <hr style="height:2px; border:none; color:#000; background: linear-gradient(to right, blue,yellow,green);  margin-top: 0px; margin-bottom: 0px;"><br>
-                    <p class="lead">Um novo conceito</p>
                 </div>
             </div>
         </div>

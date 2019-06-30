@@ -18,7 +18,7 @@ class Psicologos extends Migration
             $table->string('nome');
             $table->string('cpf');
             $table->string('telefone');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('epsi');
             $table->string('especialidade');
             $table->timestamps();
