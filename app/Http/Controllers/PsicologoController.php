@@ -14,7 +14,8 @@ class PsicologoController extends Controller
      */
     public function index()
     {
-        //
+        Psicologo::all();
+        return view('psicologos.index');
     }
 
     /**

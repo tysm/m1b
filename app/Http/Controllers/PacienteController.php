@@ -14,7 +14,8 @@ class PacienteController extends Controller
      */
     public function index()
     {
-        //
+        Paciente::all();
+        return view('pacientes.index');
     }
 
     /**
@@ -22,31 +23,12 @@ class PacienteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
-    }
+        $data = Paciente::find($request->id);
+        $data->create($request->all());
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Paciente  $paciente
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Paciente $paciente)
-    {
-        //
+        return redirect('pacientes.index');
     }
 
     /**
@@ -55,21 +37,13 @@ class PacienteController extends Controller
      * @param  \App\Paciente  $paciente
      * @return \Illuminate\Http\Response
      */
-    public function edit(Paciente $paciente)
+    public function edit(Request $request, $id)
     {
-        //
-    }
+        $data = Paciente::find($id);
+        $data->save($request->all());
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Paciente  $paciente
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Paciente $paciente)
-    {
-        //
+        return redirect('pacientes.index');
+
     }
 
     /**
@@ -78,8 +52,9 @@ class PacienteController extends Controller
      * @param  \App\Paciente  $paciente
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Paciente $paciente)
+    public function destroy($id)
     {
-        //
+        Paciente::delete($id);
+        return redirect('pacientes.index');
     }
 }
