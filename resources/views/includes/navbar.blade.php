@@ -10,7 +10,7 @@
         <a class="nav-link" href="#">Sobre<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Disponibilidade</a>
+        <a class="nav-link" href="{{ route('psicologos') }}" tabindex="-1" aria-disabled="true">Disponibilidade</a>
       </li>
     </ul>
                         <ul class="nav navbar-nav navbar-right">
@@ -33,7 +33,11 @@
       </div>
       <h4 class="name">Guilherme Luiz</h4>
       <h5>Gui</h5>
-      <a href="login.php">Sair</a>
+      <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Sair
+                                        </a>
     </div>
     <nav class="navbar-sidebar2">
       <ul class="list-unstyled navbar__list">
