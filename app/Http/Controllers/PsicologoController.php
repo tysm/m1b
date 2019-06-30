@@ -14,7 +14,8 @@ class PsicologoController extends Controller
      */
     public function index()
     {
-        //
+        $psicologos = Psicologo:all();
+        return view('psicologos.index')->with(['psicologos' => $psicologos]);
     }
 
     /**
@@ -24,7 +25,7 @@ class PsicologoController extends Controller
      */
     public function create()
     {
-        //
+        return view('psicologos.create');
     }
 
     /**
@@ -35,7 +36,9 @@ class PsicologoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+          Psicologo::create($request->all());
+
+        return redirect()->route('psicologos.index');
     }
 
     /**
@@ -48,6 +51,9 @@ class PsicologoController extends Controller
     {
         //
     }
+    public function search(Request $request){
+        $search= $request->get();
+    }
 
     /**
      * Show the form for editing the specified resource.
@@ -57,7 +63,8 @@ class PsicologoController extends Controller
      */
     public function edit(Psicologo $psicologo)
     {
-        //
+        $psicologo = Psicologo::find($id);
+        return view('psicologos.edit')->with(['psicologo' => $psicologo]);
     }
 
     /**
@@ -69,7 +76,9 @@ class PsicologoController extends Controller
      */
     public function update(Request $request, Psicologo $psicologo)
     {
-        //
+        
+        $psicologo = Psicologo::find($id)->update($request->all());
+        return redirect()->route('psicologos.index');
     }
 
     /**
@@ -80,6 +89,7 @@ class PsicologoController extends Controller
      */
     public function destroy(Psicologo $psicologo)
     {
-        //
+        $psicologo = Psicologo::find($id)->delete();
+        return redirect()->route('psicologos.index');
     }
 }
