@@ -14,12 +14,11 @@ class PsicologoController extends Controller
      */
     public function index()
     {
-
-        $psicologos = Psicologo:all();
-        return view('psicologos.index')->with(['psicologos' => $psicologos]);
-        
-
+       $psicologos = Psicologo::all();
+       return view('psicologos.index')->with(['psicologos' => $psicologos]);
     }
+
+   
 
     /**
      * Show the form for creating a new resource.
@@ -54,8 +53,12 @@ class PsicologoController extends Controller
     {
         //
     }
-    public function search(Request $request){
-        $search= $request->get();
+    public function search($id){
+         
+        $search= Psicologo::where('id','=',$id)->get();
+        echo $search;
+        
+
     }
 
     /**

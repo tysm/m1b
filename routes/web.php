@@ -21,6 +21,7 @@ Route::post('pacientes/edit/{id}', 'PacienteController@edit')->name('pacientes/e
 Route::post('pacientes/destroy/{id}', 'PacienteController@destroy')->name('pacientes/destroy');
 
 Route::get('psicologos', 'PsicologoController@index')->name('psicologos');
+Route::get('psicologos/search/{especialidade}', 'PsicologoController@search')->name('psicologos/search');
 Route::post('psicologos/create', 'PsicologoController@create')->name('psicologos/create');
 Route::post('psicologos/edit/{id}', 'PsicologoController@edit')->name('psicologos/edit');
 Route::post('psicologos/destroy/{id}', 'PsicologoController@destroy')->name('psicologos/destroy');

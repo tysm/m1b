@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 
+
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -11,8 +13,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        UsersTableSeeder::class;
-        PacientesTableSeeder::class;
-        PsicologosTableSeeder::class;
+        $this->call([
+            //UsersTableSeeder::class,
+            PacientesTableSeeder::class,
+            PsicologosTableSeeder::class
+
+        ]);
     }
+
+
+    
 }

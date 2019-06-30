@@ -8,9 +8,10 @@ class Psicologo extends Model
 {
     protected $fillable = [
         'name',
+        'id',
         'cpf',
         'email',
         'epsi',
-        'especialidades'
+        'especialidade'
     ];
 }

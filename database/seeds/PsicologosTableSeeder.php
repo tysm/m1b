@@ -2,6 +2,9 @@
 
 use Illuminate\Database\Seeder;
 
+use Illuminate\Support\Facades\DB;
+
+use App\Psicologo;
 class PsicologosTableSeeder extends Seeder
 {
     /**
@@ -18,7 +21,7 @@ class PsicologosTableSeeder extends Seeder
                 'telefone'          => '99888-0001',
                 'email'             => 'ssena@gmail.com',
                 'epsi'              => '07/336166',
-                'especialidades'    => 'ansiedade',
+                'especialidade'    => 'ansiedade',
             ],
             [
                 'nome'              => 'Adriana Richards',
@@ -26,7 +29,7 @@ class PsicologosTableSeeder extends Seeder
                 'telefone'          => '99844-0002',
                 'email'             => 'arich@gmail.com',
                 'epsi'              => '02/227099',
-                'especialidades'    => 'ansiedade',
+                'especialidade'    => 'ansiedade',
             ],
             [
                 'nome'              => 'João Figueira',
@@ -34,7 +37,7 @@ class PsicologosTableSeeder extends Seeder
                 'telefone'          => '99811-0031',
                 'email'             => 'jofi@gmail.com',
                 'epsi'              => '01/331123',
-                'especialidades'    => 'humanista',
+                'especialidade'    => 'humanista',
             ],
             [
                 'nome'             => 'Fernanda Botelho',
@@ -42,7 +45,7 @@ class PsicologosTableSeeder extends Seeder
                 'telefone'          => '99287-2223',
                 'email'             => 'febotelho@gmail.com',
                 'epsi'              => '06/148676',
-                'especialidades'    => 'comportamental',
+                'especialidade'    => 'comportamental',
             ],
             [
                 'nome'             => 'Juliana Beltrão',
@@ -50,7 +53,7 @@ class PsicologosTableSeeder extends Seeder
                 'telefone'          => '99777-4433',
                 'email'             => 'julib@gmail.com',
                 'epsi'              => '09/912270',
-                'especialidades'    => 'comportamental',
+                'especialidade'    => 'comportamental',
             ],
             [
                 'nome'             => 'Fernanda Takkai',
@@ -58,7 +61,7 @@ class PsicologosTableSeeder extends Seeder
                 'telefone'          => '99999-2121',
                 'email'             => 'ftakkai@gmail.com',
                 'epsi'              => '12/442270',
-                'especialidades'    => 'comportamental',
+                'especialidade'    => 'comportamental',
             ]
 
         );
