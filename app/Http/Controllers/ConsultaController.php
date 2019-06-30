@@ -12,9 +12,10 @@ class ConsultaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        //
+        Consulta::find($id);
+        return view('consultas.index');
     }
 
     /**
@@ -22,20 +23,13 @@ class ConsultaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
-    }
+        $data = Consulta::find($request->id);
+        $data->create($request->all());
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+        return redirect('consultas.index');
+
     }
 
     /**
@@ -57,19 +51,10 @@ class ConsultaController extends Controller
      */
     public function edit(Consulta $consulta)
     {
-        //
-    }
+        $data = Consulta::find($id);
+        $data->save($request->all());
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Consulta  $consulta
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Consulta $consulta)
-    {
-        //
+        return redirect('consultas.index');
     }
 
     /**
@@ -78,8 +63,10 @@ class ConsultaController extends Controller
      * @param  \App\Consulta  $consulta
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Consulta $consulta)
+    public function destroy($id)
     {
-        //
+        Consulta::destroy($id);
+        return redirect('consultas.index');
+
     }
 }

@@ -15,8 +15,8 @@ class PacientesTableSeeder extends Seeder
             'nome'      => 'Joana Darck',
             'cpf'       => '1234567900',
             'email'     => 'jodarck@gmail.com',
-            'telefone'  => '98888-4444']
-        );
+            'telefone'  => '98888-4444',
+        ]);
 
     }
 }

@@ -14,8 +14,13 @@ class PsicologoController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         $psicologos = Psicologo:all();
         return view('psicologos.index')->with(['psicologos' => $psicologos]);
+=======
+        Psicologo::all();
+        return view('psicologos.index');
+>>>>>>> 3427a4b304d6c99b3cf009ac3ec991ecfbe52992
     }
 
     /**
