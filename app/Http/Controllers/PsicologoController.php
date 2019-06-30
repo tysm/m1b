@@ -53,6 +53,7 @@ class PsicologoController extends Controller
     {
         //
     }
+    /*
     public function search($id){
          
         $search= Psicologo::where('id','=',$id)->get();
@@ -60,6 +61,7 @@ class PsicologoController extends Controller
         
 
     }
+    */
 
     /**
      * Show the form for editing the specified resource.

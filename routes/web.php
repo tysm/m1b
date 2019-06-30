@@ -34,4 +34,5 @@ Route::get('consultas/destroy/{id}', 'ConsultaController@destroy')->name('consul
 
 Auth::routes();
 
+
 Route::get('/home', 'HomeController@index')->name('home');
