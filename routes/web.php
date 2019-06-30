@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('start.init');
 });
 
 Route::get('pacientes', 'PacienteController@index')->name('pacientes');
