@@ -10,7 +10,7 @@
         <a class="nav-link" href="#">Sobre<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{ route('psicologos') }}" tabindex="-1" aria-disabled="true">Disponibilidade</a>
+        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Disponibilidade</a>
       </li>
     </ul>
                         <ul class="nav navbar-nav navbar-right">
