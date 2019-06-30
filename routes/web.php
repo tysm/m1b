@@ -36,3 +36,5 @@ Auth::routes();
 
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/psicologos', 'PsicologoController@index')->name('psicologos');

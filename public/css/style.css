@@ -3,10 +3,6 @@ body {
 }
 
 .bg-light {
-	background: rgb(162,207,186);
-	background: linear-gradient(172deg, rgba(162,207,186,1) 24%, rgba(161,228,237,1) 55%, rgba(255,255,255,1) 81%); 	
-}
-
-.cover-page {
-
+	 background: rgb(162,207,186);
+background: linear-gradient(172deg, rgba(162,207,186,1) 24%, rgba(161,228,237,1) 55%, rgba(191,226,218,1) 81%); 
 }

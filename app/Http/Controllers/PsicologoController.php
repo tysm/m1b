@@ -14,8 +14,7 @@ class PsicologoController extends Controller
      */
     public function index()
     {
-       $psicologos = Psicologo::all();
-       return view('psicologos.index')->with(['psicologos' => $psicologos]);
+       return view('psicologos');
     }
 
    
